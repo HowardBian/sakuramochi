@@ -61,7 +61,7 @@ export default function Home() {
                 whileTap={{ scale: 0.95 }}
                 className="font-sans uppercase font-bold text-lg tracking-wider border-2 bg-white border-black py-4 px-10 inline-flex items-center gap-x-2 rounded-full"
               >
-                <a href=" https://popuphanami-tickets-2025.square.site/product/pop-up-hanami-2025-tickets/69?cs=true&cst=custom" target="_blank">
+                <a href="https://anisocial.square.site" target="_blank">
                   Buy Tickets NOW!
                 </a>
               </motion.button>
