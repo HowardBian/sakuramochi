@@ -38,15 +38,15 @@ export default function Home() {
             </p>
             <p className="font-display-en uppercase text-9xl">
               <span className="text-pink">Pop-Up</span> Hanami<br></br>
-              <span className="text-pink"> 2025</span>
+              <span className="text-pink"> 2026</span>
             </p>
             
             <div className="font-mono font-bold text-3xl md:text-4xl uppercase mb-5 text-nowrap">
-              <p>Date March 29, 2025</p>
-              <p>11:00am - 8:30pm</p>
+              <p>Date April 4, 2026</p>
+              <p>11:30am - 7:30pm</p>
             </div>
             <p className="font-sans w-full lg:w-2/5 font-medium text-lg">
-            A one-day, cherry-blossom-themed event at the University of British Columbia, featuring a cosplay cafe, an artist alley, stage performances, games & raffles, and more!
+            A one-day, cherry-blossom-themed anime convention event at the University of British Columbia, featuring a cafe, an artist alley, stage performances, games, raffles, and more!
             </p>
             <div className="flex flex-col md:flex-row gap-6 md:gap-8 my-10 justify-items-stretch">
               <motion.button
@@ -80,28 +80,28 @@ export default function Home() {
           className="grid lg:grid-cols-2 gap-10 text-black"
         >
           <Card
-            title={"Sakura Cosplay Cafe"}
+            title={"Hanami Cafe"}
             description={
               "Cosplay waiters serve you sweet treats under the cherry blossoms!"
             }
             link={"/cafe"}
-            imgsrc={"/cosplay cafe.png"}
+            imgSrc={"/cosplay cafe.png"}
           />
           <Card
             title={"Artist & Vendor Alley"}
             description={
-              "Featuring never before seen merch from the hidden talents of UBCAni artists."
+              "Featuring never before seen merch from the hidden talents of our community artists."
             }
             link={"/artists"}
-            imgsrc={"/artist alley.png"}
+            imgSrc={"/artist alley.png"}
           />
           <Card
             title={"Stage Performances"}
             description={
-              "Dance performances, idol groups, non-stop J-Pop, J-Rock, and anime OPs for the whole day."
+              "Dance performances, idol groups, bands, non-stop J-Pop, J-Rock, and Anime OPs for the whole day!"
             }
             link={"/stage"}
-            imgsrc={"/stage performances.png"}
+            imgSrc={"/stage performances.png"}
           />
           <Card
             title={"Schedule & Activities"}
@@ -109,12 +109,12 @@ export default function Home() {
               "Join our community hosted panels, workshops, and Hanami-inspired activities to cash in at our raffles and prizes!"
             }
             link={"/schedule"}
-            imgsrc={"/games.png"}
+            imgSrc={"/games.png"}
           />
         </div>
         <div data-aos="fade-up" className="mt-20">
-          <Floorplan />
-          <Sponsors />
+          {/* <Floorplan /> */}
+          {/* <Sponsors /> */}
           <Faq />
         </div>
       </div>

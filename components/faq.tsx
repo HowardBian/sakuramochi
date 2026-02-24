@@ -57,8 +57,8 @@ export function Faq() {
                 aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-one"
               >
                 <p className="mb-2">
-                Pop-Up Hanami officially starts at 11:00am. Our main event (including our Artist Alley and Cafe) runs until 6pm. 
-                Afterwards, everyone will be directed to the Norm Theatre to watch the Idol Showcase, starting at 7:00pm.
+                  Pop-Up Hanami officially starts at 11:30am, and will end at 7:30pm. The cafe will run until sold out. 
+                  We recommend coming as early as possible to get your favourite drink at our Cafe and get the limited-run merch at the Artist & Vendor Alley!
                 </p>
                 <p>
                 We recommend coming as early as possible to get your favourite drink
@@ -272,14 +272,12 @@ export function Faq() {
                 aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-five"
               >
                 <p className="mb-2">
-                  We highly encourage attendees to cosplay to Pop-Up Hanami!
-                  However, please keep in mind that this is an all-ages event
-                  and cosplay appropriately.
+                  We highly encourage attendees to cosplay to Pop-Up Hanami! 
+                  However, please keep in mind that this is an all-ages event and cosplay appropriately.
                 </p>
                 <p className="mb-2">
-                  All weapon props must have clear markings or modifications to
-                  indicate that they are fake. Bright ribbons will be provided
-                  at the info counter if required.
+                  All weapon props must have clear markings or modifications to indicate that they are fake. 
+                  Bright ribbons will be provided at registration if required.
                 </p>
                 <p>For more information, please see our Event Policies.</p>
               </div>
@@ -531,8 +529,8 @@ export function Faq() {
                 className="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
                 aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-five"
               >
-                <p className="">
-                For more information about the Sakura Cosplay Cafe, Artist & Vendor Alley, Stage Performances, and Activities & Raffles, please see the sections above. If you still cannot find the answer to your question, please email us at <a href="mailto:hanami.ubcani@gmail.com">hanami.ubcani@gmail.com</a>, message us at <a href="instagram.com/ubcani"> instagram.com/ubcani</a>, or ping an exec in our Discord Server!
+                <p>
+                  For more information about the Sakura Cafe, Artist & Vendor Alley, Stage Performances, and Activities & Raffles, please see the sections above. If you still cannot find the answer to your question, please email us at <a href="mailto:hanami.ubcani@gmail.com">hanami.ubcani@gmail.com</a>, or message us at <a href="https://instagram.com/ubcani"> instagram.com/ubcani</a>!
                 </p>
               </div>
             </div>
@@ -541,6 +539,7 @@ export function Faq() {
 
         <div className="hidden lg:block lg:col-span-1">
           <div className="hs-accordion-group divide-y divide-pink">
+            {/* Where is the event? How do I get there? */}
             <div
               className="hs-accordion pb-3 active"
               id="hs-basic-with-title-and-arrow-stretched-heading-one"
@@ -593,6 +592,7 @@ export function Faq() {
               </div>
             </div>
 
+            {/* How can I purchase a UBCAni Membership? */}
             <div
               className="hs-accordion pt-6 pb-3"
               id="hs-basic-with-title-and-arrow-stretched-heading-two"
@@ -645,6 +645,7 @@ export function Faq() {
               </div>
             </div>
 
+            {/* Is card payment accepted at the event? */}
             <div
               className="hs-accordion pt-6 pb-3"
               id="hs-basic-with-title-and-arrow-stretched-heading-three"
@@ -696,6 +697,7 @@ export function Faq() {
               </div>
             </div>
 
+            {/* How do I connect to the UBC WiFi? */}
             <div
               className="hs-accordion pt-6 pb-3"
               id="hs-basic-with-title-and-arrow-stretched-heading-four"
@@ -748,6 +750,7 @@ export function Faq() {
               </div>
             </div>
 
+            {/* Help! I have a question that isn’t answered by this FAQ. */}
             <div
               className="hs-accordion pt-6 pb-3"
               id="hs-basic-with-title-and-arrow-stretched-heading-five"
@@ -792,12 +795,7 @@ export function Faq() {
                 aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-five"
               >
                 <p className="">
-                  For more information about the Sakura Cosplay Cafe, Artist &
-                  Vendor Alley, Stage Performances, and Games & Raffles, please
-                  see the sections above. If you still cannot find the answer to
-                  your question, please email us at hanami.ubcani@gmail.com, message us
-                  at instagram.com/ubcani, or ping an exec in our Discord
-                  Server!
+                  For more information about the Hanami Cafe, Artist & Vendor Alley, Stage Performances, and Activities & Raffles, please see the sections above. If you still cannot find the answer to your question, please email us at <a href="mailto:hanami.ubcani@gmail.com">hanami.ubcani@gmail.com</a>, or message us at <a href="https://instagram.com/ubcani"> instagram.com/ubcani</a>!
                 </p>
               </div>
             </div>
