@@ -112,17 +112,16 @@ export function NavBar() {
               </a>
             </div>
           </div>
-          <motion.div
+          <motion.a
+            href="https://anisocial.square.site" 
+            target="_blank"
             whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
             whileTap={{ scale: 0.95 }}
             className="absolute right-3 top-3 md:top-5 md:right-5 text-nowrap font-sans underline underline-offset-4 uppercase font-bold text-xl text-pink tracking-wider flex flex-row items-center gap-x-2 rounded-full"
           >
-            <a href="https://anisocial.square.site" target="_blank">
-              Buy Tickets NOW
-              <ChevronRightRounded fontSize="large" />
-            </a>
-            {/* Tickets coming soon! */}
-          </motion.div>
+            Buy Tickets NOW
+            <ChevronRightRounded fontSize="large" />
+          </motion.a>
         </div>
       </motion.nav>
     </header>

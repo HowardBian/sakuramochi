@@ -49,22 +49,23 @@ export default function Home() {
             A one-day, cherry-blossom-themed anime convention event at the University of British Columbia, featuring a cafe, an artist alley, stage performances, games, raffles, and more!
             </p>
             <div className="flex flex-col md:flex-row gap-6 md:gap-8 my-10 justify-items-stretch">
-              <motion.button
+              <motion.a
+                href="#features"
                 whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
                 whileTap={{ scale: 0.95 }}
-                className="font-sans uppercase font-bold text-lg text-white tracking-wider bg-pink py-4 px-10 inline-flex items-center gap-x-2 rounded-full border-none"
+                className="font-sans uppercase font-bold text-lg text-white tracking-wider bg-pink py-4 px-10 inline-flex items-center gap-x-2 rounded-full"
               >
-                <a href="#features">Learn More</a>
-              </motion.button>
-              <motion.button
+                Learn More
+              </motion.a>
+              <motion.a
+                href="https://anisocial.square.site"
+                target="_blank"
                 whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
                 whileTap={{ scale: 0.95 }}
                 className="font-sans uppercase font-bold text-lg tracking-wider border-2 bg-white border-black py-4 px-10 inline-flex items-center gap-x-2 rounded-full"
               >
-                <a href="https://anisocial.square.site" target="_blank">
-                  Buy Tickets NOW!
-                </a>
-              </motion.button>
+                Buy Tickets NOW!
+              </motion.a>
             </div>
           </div>
           <motion.img
@@ -82,7 +83,7 @@ export default function Home() {
           <Card
             title={"Hanami Cafe"}
             description={
-              "Cosplay waiters serve you sweet treats under the cherry blossoms!"
+              "Sweet drinks and smooth jazz to relax from all the hustle and bustle~"
             }
             link={"/cafe"}
             imgSrc={"/cosplay cafe.png"}

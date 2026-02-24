@@ -377,7 +377,7 @@ export function Faq() {
                 <p>
                   You can purchase a UBCAni Membership at any of our weekly
                   events hosted on UBC campus, or at our club room by dropping
-                  us a message at <a href="http://instagram.com/ubcani">instagram.com/ubcani</a>, pinging an exec on our
+                  us a message at <a href="http://instagram.com/popuphanami">instagram.com/popuphanami</a>, pinging an exec on our
                   Discord Server, or sending an email to <a href="mailto:hanami.ubcani@gmail.com">hanami.ubcani@gmail.com</a>.
                 </p>
               </div>
@@ -530,7 +530,7 @@ export function Faq() {
                 aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-five"
               >
                 <p>
-                  For more information about the Sakura Cafe, Artist & Vendor Alley, Stage Performances, and Activities & Raffles, please see the sections above. If you still cannot find the answer to your question, please email us at <a href="mailto:hanami.ubcani@gmail.com">hanami.ubcani@gmail.com</a>, or message us at <a href="https://instagram.com/ubcani"> instagram.com/ubcani</a>!
+                  For more information about the Sakura Cafe, Artist & Vendor Alley, Stage Performances, and Activities & Raffles, please see the sections above. If you still cannot find the answer to your question, please email us at <a href="mailto:hanami.ubcani@gmail.com">hanami.ubcani@gmail.com</a>, or message us at <a href="https://instagram.com/popuphanami"> instagram.com/popuphanami</a>!
                 </p>
               </div>
             </div>
@@ -639,7 +639,7 @@ export function Faq() {
                 <p>
                   You can purchase a UBCAni Membership at any of our weekly
                   events hosted on UBC campus, or at our club room by dropping
-                  us a message at <a href="http://instagram.com/ubcani">instagram.com/ubcani</a>, pinging an exec on our
+                  us a message at <a href="http://instagram.com/popuphanami">instagram.com/popuphanami</a>, pinging an exec on our
                   Discord Server, or sending an email to <a href="mailto:hanami.ubcani@gmail.com">hanami.ubcani@gmail.com</a>.
                 </p>
               </div>
@@ -795,7 +795,7 @@ export function Faq() {
                 aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-five"
               >
                 <p className="">
-                  For more information about the Hanami Cafe, Artist & Vendor Alley, Stage Performances, and Activities & Raffles, please see the sections above. If you still cannot find the answer to your question, please email us at <a href="mailto:hanami.ubcani@gmail.com">hanami.ubcani@gmail.com</a>, or message us at <a href="https://instagram.com/ubcani"> instagram.com/ubcani</a>!
+                  For more information about the Hanami Cafe, Artist & Vendor Alley, Stage Performances, and Activities & Raffles, please see the sections above. If you still cannot find the answer to your question, please email us at <a href="mailto:hanami.ubcani@gmail.com">hanami.ubcani@gmail.com</a>, or message us at <a href="https://instagram.com/popuphanami"> instagram.com/popuphanami</a>!
                 </p>
               </div>
             </div>
