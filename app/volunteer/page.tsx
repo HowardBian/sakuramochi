@@ -63,7 +63,7 @@ export default function Volunteer() {
                   "Set up, Registration, Activity Booths, Stagehands, Security, and more!"
                 }
                 icon={<BackHandRounded />}
-                link={"https://forms.gle/zoavAd33xqcubkrL6"}
+                link={"https://docs.google.com/forms/d/e/1FAIpQLSc7O8EXoxg6WkQ4m08pg1jAuOhqOg8OkSg79kizkkD1_gIR7Q/viewform"}
               />
             </motion.div>
             {/* <motion.div
