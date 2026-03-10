@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import {
   BackHandRounded,
   BakeryDiningRounded,
@@ -30,9 +31,12 @@ export default function Volunteer() {
           data-aos="fade-up"
           className="border-grey border-2 relative aspect-[18/6] w-full xl:w-2/3 rounded-xl overflow-hidden mb-10"
         >
-          <img
+          <Image
             className="size-full absolute top-0 start-0 object-cover rounded-2xl"
             src="/volunteers wanted.png"
+            alt="Volunteers wanted banner"
+            fill
+            sizes="(min-width: 1280px) 66vw, 100vw"
           />
         </div>
         <div
@@ -63,7 +67,7 @@ export default function Volunteer() {
                   "Set up, Registration, Activity Booths, Stagehands, Security, and more!"
                 }
                 icon={<BackHandRounded />}
-                link={"https://docs.google.com/forms/d/e/1FAIpQLSc7O8EXoxg6WkQ4m08pg1jAuOhqOg8OkSg79kizkkD1_gIR7Q/viewform"}
+                link={"https://forms.gle/jErkHc5gVjk5XEug7"}
               />
             </motion.div>
             {/* <motion.div
