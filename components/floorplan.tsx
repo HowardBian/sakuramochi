@@ -17,12 +17,12 @@ export function Floorplan() {
 
     {/* Floorplan container: vertical on mobile, grid on larger screens */}
     <div className="flex flex-col sm:flex-wrap sm:flex-row justify-center items-center gap-8 mt-6 w-full">
-      {floorplans.map((floorplan, index) => (
+      {floorplans.map((plan, index) => (
         <div
           key={index}
           className="border-grey border-2 relative overflow-hidden ease-in-out rounded-xl w-full max-w-[600px] h-auto aspect-[1440/1024]"
         >
-          <img src={floorplan.src} className="w-full h-full object-cover" />
+          <Image src={plan.src} alt={`Floor plan ${index + 1}`} fill sizes="(max-width: 640px) 100vw, 600px" className="object-cover"/>
         </div>
       ))}
     </div>
