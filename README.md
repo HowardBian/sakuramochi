@@ -19,4 +19,12 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Deployment
 
-This repository is deployed through vercel, and all pushes to `origin/master` are automatically built and published.
+On linux server, run the following commands in sequence:
+
+``` bash
+git pull
+npm run build
+pkill -f "node server.js"
+npm start
+ps aux | grep node  # make sure a node process (e.g. /usr/bin/node server.js) is running
+```
