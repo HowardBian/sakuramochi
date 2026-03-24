@@ -10,7 +10,7 @@ export default function ComingSoon() {
         >
           <div className="flex flex-col z-40 lg:items-start justify-items-center gap-2 p-0">
             <p className="font-display-en text-black text-6xl md:text-9xl">
-              This page is under construction!
+              More info coming soon~!
             </p>
           </div>
         </div>

@@ -1,9 +1,9 @@
 import Image from "next/image";
 
 const sponsors = [
-    { src: "/logo-teadot.png", alt: "Teadot Logo", link:"https://www.teadotdrinks.com/" },
-    { src: "/logo-xppen.png", alt: "XP Pen Logo", link:"https://www.xp-pen.com/" },
-    { src: "/logo-huion.jpg", alt: "Huion Logo", link:"https://huion.com/" },
+    { src: "/logo_hyper_x.png", alt: "Hyper X Logo", link:"https://ca.hyperx.com" },
+    { src: "/logo_kanto.png", alt: "Kanto Audio Logo", link:"https://www.kantoaudio.com" },
+    { src: "/logo_huion.png", alt: "Huion Logo", link:"https://huion.com/" },
     
 ];
 
@@ -19,19 +19,20 @@ export function Sponsors() {
         </p>
         <div className="flex flex-wrap justify-center items-center gap-8 mt-6">
           {sponsors.map((sponsor, index) => (
-            <div
+            <a
               key={index}
-              className="border-grey border-2 relative overflow-hidden ease-in-out rounded-xl"
+              href={sponsor.link}
+              className="border-grey border-2 relative flex items-center justify-center overflow-hidden ease-in-out rounded-xl w-36 h-24 md:w-80 md:h-40 p-4"
             >
-              <a href={sponsor.link}><Image
+              <Image
                 src={sponsor.src}
                 alt={sponsor.alt}
-                width={150}
-                height={150}
-                className="w-32 h-32 md:w-80 md:h-80 object-cover"
+                width={320}
+                height={320}
+                sizes="(min-width: 768px) 320px, 144px"
+                className="max-w-full max-h-full w-auto h-auto object-contain"
               />
-              </a>
-            </div>
+            </a>
           ))}
         </div>
       </div>
