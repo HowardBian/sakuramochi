@@ -1,7 +1,7 @@
 "use client";
 
 import Image from 'next/image';
-import { useMemo } from 'react';
+import { useEffect, useState } from 'react';
 
 const mainStage = [
   '/stage/1.webp',
@@ -26,8 +26,11 @@ function shuffleArray<T>(array: T[]): T[] {
 
 
 export default function Stage() {
+  const [shuffledMainStage, setShuffledMainStage] = useState<string[] | null>(null);
 
-  const shuffledMainStage = useMemo(() => shuffleArray(mainStage), []);
+  useEffect(() => {
+    setShuffledMainStage(shuffleArray(mainStage));
+  }, []);
   
   return (
     <main className="flex flex-col w-full min-h-screen p-10 pb-24 text-black text-pretty">
@@ -48,7 +51,7 @@ export default function Stage() {
 
         <div data-aos="fade-up" className="w-full bg-gray-100 p-6 flex flex-col items-center">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full px-2 md:px-4">
-            {shuffledMainStage.map((src, index) => (
+            {shuffledMainStage?.map((src, index) => (
               <Image
                 key={index}
                 src={src}
