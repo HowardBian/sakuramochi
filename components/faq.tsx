@@ -58,11 +58,9 @@ export function Faq() {
               >
                 <p className="mb-2">
                   Pop-Up Hanami officially starts at 11:30am, and will end at 7:30pm. The cafe will run until sold out. 
-                  We recommend coming as early as possible to get your favourite drink at our Cafe and get the limited-run merch at the Artist & Vendor Alley!
                 </p>
                 <p>
-                We recommend coming as early as possible to get your favourite drink
-                 at our Cafe and get the limited-run merch at the Artist & Vendor Alley!
+                  We recommend coming as early as possible to get your favourite drink at our Cafe and get the limited-run merch at the Artist & Vendor Alley!
                 </p>
               </div>
             </div>
