@@ -15,18 +15,18 @@ export default function Cafe() {
               Pop-Up Hanami 2025
             </p>
             <p className="hidden sm:block font-display-en uppercase text-black text-9xl">
-              Cosplay Cafe
+              Hanami Cafe
             </p>
             <p className="sm:hidden font-display-en uppercase text-black text-8xl">
-              Sakura Cosplay Cafe
+              Hanami Cafe
             </p>
           </div>
         </div>
-        <div data-aos="fade-up" className="lg:w-2/3">
+        {/* <div data-aos="fade-up" className="lg:w-2/3">
           <p className="font-sans font-medium text-lg">
           {`Step into a world of pastel dreams at this year's Sakura Cosplay Cafe, where the magic of the early 2000s Shoujo comes to life! Sip on a Sailor Moonblast served by waiters in your favorite Shoujo-inspired outfits, and who knows? A little spark of romance might just find its way into your cup~`}
           </p>
-        </div>
+        </div> */}
         <motion.img
           src="/menu.webp"
           className="md:block float rounded-xl z-0 p-10"
