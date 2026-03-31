@@ -1,3 +1,106 @@
+type CafeFaqItemData = {
+  question: string;
+  answer: string;
+  defaultOpen?: boolean;
+};
+
+const cafeFaqItems: CafeFaqItemData[] = [
+  {
+    question: 'What are the hours of the Cafe?',
+    answer: 'We are open at 12:30PM until we run out of drinks, or 7:00PM, whichever comes first!',
+    defaultOpen: true,
+  },
+  {
+    question: 'Do I need a reservation for the cafe, or can I walk in?',
+    answer: 'No! Simply walk into the cafe and line up to place your order.',
+  },
+  {
+    question: 'Do I need to purchase a ticket for Pop-Up Hanami to go to the cafe?',
+    answer: 'Tickets to Pop-Up Hanami are required for entrance to the cafe.',
+  },
+  {
+    question: 'What type of food/drinks do you serve?',
+    answer: 'We serve four specially-made themed drinks, please find them on our menu!',
+  },
+  {
+    question: 'Are your drinks vegetarian/vegan?',
+    answer: 'All of our drinks are vegan!',
+  },
+  {
+    question: 'What are the prices of each drink?',
+    answer: 'All of our drinks are priced at $5!',
+  },
+  {
+    question: 'What kind of payment does the cafe take?',
+    answer: 'No cash, we take cards only!',
+  },
+  {
+    question: 'What time are the cafe performances?',
+    answer: '2:00PM to 3:30PM, we will first have UAM playing, and then AniJazz Project!',
+  }
+];
+
+function AccordionChevron() {
+  return (
+    <>
+      <svg
+        className="hs-accordion-active:hidden block flex-shrink-0 size-5 text-black group-hover:text-green"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="m6 9 6 6 6-6" />
+      </svg>
+      <svg
+        className="hs-accordion-active:block hidden flex-shrink-0 size-5 text-black group-hover:text-green"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="m18 15-6-6-6 6" />
+      </svg>
+    </>
+  );
+}
+
+function CafeFaqItem(props: { item: CafeFaqItemData; index: number }) {
+  const headingId = 'cafe-faq-heading-' + (props.index + 1);
+  const collapseId = 'cafe-faq-collapse-' + (props.index + 1);
+  const accordionClassName =
+    'hs-accordion hs-accordion-active:bg-grey bg-opacity-25 rounded-xl p-6' +
+    (props.item.defaultOpen ? ' active' : '');
+  const contentClassName =
+    'hs-accordion-content w-full overflow-hidden transition-[height] duration-300' +
+    (props.item.defaultOpen ? '' : ' hidden');
+
+  return (
+    <div className={accordionClassName} id={headingId}>
+      <button
+        className="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-black rounded-lg transition hover:text-green"
+        aria-controls={collapseId}
+      >
+        {props.item.question}
+        <AccordionChevron />
+      </button>
+      <div id={collapseId} className={contentClassName} aria-labelledby={headingId}>
+        <p className="text-black">{props.item.answer}</p>
+      </div>
+    </div>
+  );
+}
+
 export function CafeFaq() {
   return (
     <div className="mx-auto font-sans">
@@ -9,300 +112,9 @@ export function CafeFaq() {
 
       <div className="mx-auto">
         <div className="hs-accordion-group">
-          <div
-            className="hs-accordion hs-accordion-active:bg-grey bg-opacity-25 rounded-xl p-6 active"
-            id="hs-basic-with-title-and-arrow-stretched-heading-one"
-          >
-            <button
-              className="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-black rounded-lg transition hover:text-green"
-              aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-one"
-            >
-              I have allergies, can I still dine at the Sakura Cosplay Cafe?
-              <svg
-                className="hs-accordion-active:hidden block flex-shrink-0 size-5 text-black group-hover:text-green"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="m6 9 6 6 6-6" />
-              </svg>
-              <svg
-                className="hs-accordion-active:block hidden flex-shrink-0 size-5 text-black group-hover:text-green"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="m18 15-6-6-6 6" />
-              </svg>
-            </button>
-            <div
-              id="hs-basic-with-title-and-arrow-stretched-collapse-one"
-              className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300"
-              aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-one"
-            >
-              <p className="text-black">
-                We cannot guarantee an allergen-free environment at the Sakura
-                Cosplay Cafe. We will provide a list of ingredients for each
-                menu item, but it is ultimately up to your own discretion
-                whether you choose to dine at our cafe.
-              </p>
-            </div>
-          </div>
-
-          <div
-            className="hs-accordion hs-accordion-active:bg-grey bg-opacity-25 rounded-xl p-6"
-            id="hs-basic-with-title-and-arrow-stretched-heading-two"
-          >
-            <button
-              className="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-black rounded-lg transition hover:text-green"
-              aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two"
-            >
-              How can I attend the Sakura Cosplay Cafe?
-              <svg
-                className="hs-accordion-active:hidden block flex-shrink-0 size-5 text-black group-hover:text-green"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="m6 9 6 6 6-6" />
-              </svg>
-              <svg
-                className="hs-accordion-active:block hidden flex-shrink-0 size-5 text-black group-hover:text-green"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="m18 15-6-6-6 6" />
-              </svg>
-            </button>
-            <div
-              id="hs-basic-with-title-and-arrow-stretched-collapse-two"
-              className="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
-              aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-two"
-            >
-              <p className="text-black ">
-              Purchase a ticket to Pop-Up Hanami, and show up to our Cafe anytime during the event! 
-              </p>
-            </div>
-          </div>
-
-          <div
-            className="hs-accordion hs-accordion-active:bg-grey bg-opacity-25 rounded-xl p-6"
-            id="hs-basic-with-title-and-arrow-stretched-heading-three"
-          >
-            <button
-              className="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-black rounded-lg transition hover:text-green"
-              aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-three"
-            >
-              What methods of payment do you accept at the Sakura Cosplay Cafe?
-              <svg
-                className="hs-accordion-active:hidden block flex-shrink-0 size-5 text-black group-hover:text-green"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="m6 9 6 6 6-6" />
-              </svg>
-              <svg
-                className="hs-accordion-active:block hidden flex-shrink-0 size-5 text-black group-hover:text-green"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="m18 15-6-6-6 6" />
-              </svg>
-            </button>
-            <div
-              id="hs-basic-with-title-and-arrow-stretched-collapse-three"
-              className="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
-              aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-three"
-            >
-              <p className="text-black ">We accept card payments only.</p>
-            </div>
-          </div>
-
-          <div
-            className="hs-accordion hs-accordion-active:bg-grey bg-opacity-25 rounded-xl p-6"
-            id="hs-basic-with-title-and-arrow-stretched-heading-four"
-          >
-            <button
-              className="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-black rounded-lg transition hover:text-green"
-              aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-four"
-            >
-              What time does the Sakura Cosplay Cafe run until?
-              <svg
-                className="hs-accordion-active:hidden block flex-shrink-0 size-5 text-black group-hover:text-green"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="m6 9 6 6 6-6" />
-              </svg>
-              <svg
-                className="hs-accordion-active:block hidden flex-shrink-0 size-5 text-black group-hover:text-green"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="m18 15-6-6-6 6" />
-              </svg>
-            </button>
-            <div
-              id="hs-basic-with-title-and-arrow-stretched-collapse-four"
-              className="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
-              aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-four"
-            >
-              <p className="text-black ">
-              The Sakura Cosplay Cafe will open at 11:00am and be open until we run out of ingredients (or the event ends!). Drinks are limited, so we recommend coming as early as possible to secure your favourite beverage at the Sakura Cosplay Cafe!
-              </p>
-            </div>
-          </div>
-
-          <div
-            className="hs-accordion hs-accordion-active:bg-grey bg-opacity-25 rounded-xl p-6"
-            id="hs-basic-with-title-and-arrow-stretched-heading-five"
-          >
-            <button
-              className="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-black rounded-lg transition hover:text-green"
-              aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-five"
-            >
-              How many people can sit together at the Sakura Cosplay Cafe?
-              <svg
-                className="hs-accordion-active:hidden block flex-shrink-0 size-5 text-black group-hover:text-green"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="m6 9 6 6 6-6" />
-              </svg>
-              <svg
-                className="hs-accordion-active:block hidden flex-shrink-0 size-5 text-black group-hover:text-green"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="m18 15-6-6-6 6" />
-              </svg>
-            </button>
-            <div
-              id="hs-basic-with-title-and-arrow-stretched-collapse-five"
-              className="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
-              aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-five"
-            >
-              <p className="text-black ">
-              There is no assigned seating at the Sakura Cosplay Cafe, so feel free to eat with as many/as few people as possible!
-              </p>
-            </div>
-          </div>
-
-          <div
-            className="hs-accordion hs-accordion-active:bg-grey bg-opacity-25 rounded-xl p-6"
-            id="hs-basic-with-title-and-arrow-stretched-heading-six"
-          >
-            <button
-              className="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-black rounded-lg transition hover:text-green"
-              aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-six"
-            >
-              Can I take the BEAUTIFUL menus home?
-              <svg
-                className="hs-accordion-active:hidden block flex-shrink-0 size-5 text-black group-hover:text-green"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="m6 9 6 6 6-6" />
-              </svg>
-              <svg
-                className="hs-accordion-active:block hidden flex-shrink-0 size-5 text-black group-hover:text-green"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="m18 15-6-6-6 6" />
-              </svg>
-            </button>
-            <div
-              id="hs-basic-with-title-and-arrow-stretched-collapse-six"
-              className="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
-              aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-six"
-            >
-              <p className="text-black ">
-              You are welcome to take one home as long as supplies last!
-              </p>
-            </div>
-          </div>
+          {cafeFaqItems.map((item, index) => (
+            <CafeFaqItem key={item.question} item={item} index={index} />
+          ))}
         </div>
       </div>
     </div>
