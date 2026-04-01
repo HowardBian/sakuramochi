@@ -4,6 +4,7 @@ const sponsors = [
     { src: "/logo_hyper_x.png", alt: "Hyper X Logo", link:"https://ca.hyperx.com" },
     { src: "/logo_kanto.png", alt: "Kanto Audio Logo", link:"https://www.kantoaudio.com" },
     { src: "/logo_huion.png", alt: "Huion Logo", link:"https://huion.com/" },
+    { src: "/logo_teadot.png", alt: "Teadot Logo", link:"https://www.teadotdrinks.com/" },
     
 ];
 
