@@ -25,6 +25,6 @@ On linux server, run the following commands in sequence:
 git pull
 npm run build
 pkill -f "node server.js"
-npm start
+npm run start
 ps aux | grep node  # make sure a node process (e.g. /usr/bin/node server.js) is running
 ```
